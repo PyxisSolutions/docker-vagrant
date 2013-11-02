@@ -6,7 +6,11 @@ export DEBIAN_FRONTEND=noninteractive
 
 # setup docker
 apt-get update
-apt-get -y install linux-image-generic-lts-raring linux-headers-generic-lts-raring
+apt-get -y install \
+  linux-image-generic-lts-raring \
+  linux-headers-generic-lts-raring \
+  vim \
+  golang
 
 # Add the Docker repository key to your local keychain
 wget -qO- https://get.docker.io/gpg | apt-key add -
